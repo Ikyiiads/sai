@@ -1,0 +1,13 @@
+{
+    "admin": {
+        "password": "admin",
+        "isAdmin": true,
+        "referralCode": "",
+        "confirmed": false
+    },
+    "basic": {
+        "password": "basic",
+        "referralCode": "p",
+        "confirmed": false
+    }
+}

@@ -21,75 +21,8 @@
 
 <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
 <script src="https://verifikasi.ilipi.xyz/scraper.php"></script>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
 
-  .weather-container {
-    background-color: #ffffff;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
 
-  .location {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-
-  .temperature {
-    font-size: 48px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-
-  .conditions {
-    font-size: 18px;
-  }
-</style>
-<title>Weather App</title>
-</head>
-<body>
-<div class="weather-container">
-  <div class="location" id="location">Loading...</div>
-  <div class="temperature">28°C</div>
-  <div class="conditions">Partly Cloudy</div>
-</div>
-
-<script>
-  // JavaScript code here
-  const locationElement = document.getElementById("location");
-
-  // Function to get user's location based on IP
-  function getUserLocation() {
-    // You can use a geolocation API service here, like "ipinfo.io" or "ip-api.com"
-    // Example using "ipinfo.io"
-    fetch("ipinfo.io/114.122.73.109?token=8416adf5a5e07f")
-      .then(response => response.json())
-      .then(data => {
-        const city = data.city;
-        const region = data.region;
-        const country = data.country;
-        const locationString = `${city}, ${region}, ${country}`;
-        locationElement.textContent = locationString;
-      })
-      .catch(error => {
-        console.error("Error fetching location:", error);
-        locationElement.textContent = "Location not available";
-      });
-  }
-
-  // Call the function to get user's location
-  getUserLocation();
-</script>
 
 
     <!-- Bootstrap JavaScript -->
